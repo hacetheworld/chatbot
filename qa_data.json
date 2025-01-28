@@ -1,0 +1,46 @@
+{
+    "general": {
+      "what is rto": "RTO (Regional Transport Office) is a government authority responsible for vehicle registration, licensing, and transport regulations.",
+      "how can I contact my nearest rto office": "You can visit the official RTO website or call their helpline to find contact details of your nearest office."
+    },
+    "driving_license": {
+      "how many days does it take to get a driving license": "It usually takes around 30-45 days to receive your permanent driving license after successfully passing the test.",
+      "what documents are needed for a driving license": "You need an Aadhaar card, age proof, address proof, passport-sized photos, and a learner's license.",
+      "how can i check my driving license status": "You can check the status on the Parivahan website by entering your application number.",
+      "i lost my driving license, what should i do": "You should file an FIR at your nearest police station and apply for a duplicate license at your RTO.",
+      "what is the fee for a driving license": "The fee varies by state, but generally, a learner’s license costs ₹200, and a permanent license costs around ₹500-₹1000."
+    },
+    "vehicle_registration": {
+      "how do i register a new vehicle": "Visit your RTO with the required documents, including sales invoice, insurance copy, and roadworthiness certificate.",
+      "what is the cost of vehicle registration": "It depends on the vehicle type and state. It generally ranges from ₹1,000 to ₹10,000.",
+      "how to check vehicle registration status": "You can check the status online at the VAHAN portal using your registration number.",
+      "what is the road tax for my vehicle": "Road tax varies by state and vehicle category. You can check it on your state's RTO website.",
+      "can i register my vehicle in a different state": "Yes, but you need to obtain an NOC (No Objection Certificate) from your current RTO before re-registration."
+    },
+    "pollution_certificate": {
+      "how can i get a pollution certificate": "You can get a PUC (Pollution Under Control) certificate from authorized testing centers at petrol pumps or RTOs.",
+      "what is the validity of a puc certificate": "For new vehicles, it is valid for one year. For old vehicles, it must be renewed every six months.",
+      "how to check if my vehicle puc certificate is valid": "Visit the Parivahan website and enter your vehicle number to check PUC validity."
+    },
+    "road_permits": {
+      "do i need a permit to drive in another state": "For private vehicles, no permit is needed. For commercial vehicles, an interstate permit is required.",
+      "how to get a commercial vehicle permit": "You need to apply at the RTO with vehicle documents, fitness certificate, and insurance.",
+      "what are the types of vehicle permits": "There are national permits (for interstate travel) and local permits (for within-state travel)."
+    },
+    "vehicle_transfer": {
+      "how do i transfer ownership of a vehicle": "You need to submit Form 29 & 30, insurance, NOC, and valid ID proof to the RTO.",
+      "how long does it take to transfer vehicle ownership": "It typically takes 15-30 days after submitting the required documents.",
+      "how to check vehicle ownership transfer status": "You can track it on the VAHAN website using the registration number."
+    },
+    "challan_status": {
+      "how can i check my traffic challan status": "You can check it online on the eChallan website by entering your vehicle number.",
+      "how do i pay my pending challan": "You can pay it online via the Parivahan website or at your local RTO office.",
+      "what happens if i don’t pay my challan": "If you don’t pay, your license may be suspended, and legal action can be taken."
+    },
+    "road_safety_rules": {
+      "what are the latest traffic rules in india": "Speed limits, seatbelt requirements, and helmet rules are strictly enforced. Check the latest updates on the RTO website.",
+      "what is the penalty for overspeeding": "Penalties range from ₹1,000 to ₹5,000 depending on the speed limit violation.",
+      "is it mandatory to wear a seatbelt in the backseat": "Yes, as per recent rules, passengers in the backseat must also wear seatbelts."
+    }
+  }
+  

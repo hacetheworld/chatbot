@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Popup</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
+        /* Floating chat button */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Chat popup container */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* Chat header */
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Chat body */
+        .chat-body {
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        /* Input area */
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .chat-input button {
+            margin-left: 10px;
+            padding: 8px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Chat Button -->
+    <button class="chat-button" onclick="toggleChat()">💬</button>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            Chatbot <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        <div class="chat-body" id="chatbox"></div>
+        <div class="chat-input">
+            <input type="text" id="inputBox" placeholder="Ask something..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            let chatPopup = document.getElementById("chatPopup");
+            chatPopup.style.display = chatPopup.style.display === "block" ? "none" : "block";
+        }
+
+        function sendMessage() {
+            let userMessage = document.getElementById("inputBox").value;
+            if (userMessage.trim() === "") return;
+
+            let chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
+
+            fetch("http://127.0.0.1:5000/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                chatbox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            });
+
+            document.getElementById("inputBox").value = "";
+        }
+    </script>
+
+</body>
+</html>
